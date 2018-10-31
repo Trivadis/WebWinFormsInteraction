@@ -1,0 +1,6 @@
+C:\Users\DAN\OneDrive - Trivadis AG\Vitodata\WebWinFormsInteraction\DotNetParts\FrontendInteractionHub\bin\Debug\netstandard2.0\FrontendInteractionHub.deps.json
+C:\Users\DAN\OneDrive - Trivadis AG\Vitodata\WebWinFormsInteraction\DotNetParts\FrontendInteractionHub\bin\Debug\netstandard2.0\FrontendInteractionHub.dll
+C:\Users\DAN\OneDrive - Trivadis AG\Vitodata\WebWinFormsInteraction\DotNetParts\FrontendInteractionHub\obj\Debug\netstandard2.0\FrontendInteractionHub.csprojAssemblyReference.cache
+C:\Users\DAN\OneDrive - Trivadis AG\Vitodata\WebWinFormsInteraction\DotNetParts\FrontendInteractionHub\obj\Debug\netstandard2.0\FrontendInteractionHub.csproj.CoreCompileInputs.cache
+C:\Users\DAN\OneDrive - Trivadis AG\Vitodata\WebWinFormsInteraction\DotNetParts\FrontendInteractionHub\obj\Debug\netstandard2.0\FrontendInteractionHub.AssemblyInfoInputs.cache
+C:\Users\DAN\OneDrive - Trivadis AG\Vitodata\WebWinFormsInteraction\DotNetParts\FrontendInteractionHub\obj\Debug\netstandard2.0\FrontendInteractionHub.AssemblyInfo.cs

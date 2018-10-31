@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <h1>New Web App</h1>
+  <div class="person-row">
+    <div *ngIf="!!loggedIn">
+      <app-person-list class="person-col" (selected)="onSelected($event)" [persons]="persons"></app-person-list>
+      <app-person class="person-col" [person]="selectedPerson" (edit)="onEdit($event)"></app-person>
+    </div>
+    <div *ngIf="!loggedIn">
+      You've been logged out by the WinForms client!
+    </div>
+  </div>
+</div>

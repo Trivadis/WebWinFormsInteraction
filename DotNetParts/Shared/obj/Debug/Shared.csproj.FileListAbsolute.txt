@@ -1,0 +1,18 @@
+C:\Users\DAN\OneDrive - Trivadis AG\Vitodata\WebWinFormsInteraction\DotNetParts\Shared\bin\Debug\Shared.dll
+C:\Users\DAN\OneDrive - Trivadis AG\Vitodata\WebWinFormsInteraction\DotNetParts\Shared\bin\Debug\Shared.pdb
+C:\Users\DAN\OneDrive - Trivadis AG\Vitodata\WebWinFormsInteraction\DotNetParts\Shared\obj\Debug\Shared.csprojAssemblyReference.cache
+C:\Users\DAN\OneDrive - Trivadis AG\Vitodata\WebWinFormsInteraction\DotNetParts\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
+C:\Users\DAN\OneDrive - Trivadis AG\Vitodata\WebWinFormsInteraction\DotNetParts\Shared\obj\Debug\Shared.dll
+C:\Users\DAN\OneDrive - Trivadis AG\Vitodata\WebWinFormsInteraction\DotNetParts\Shared\obj\Debug\Shared.pdb
+D:\Hacking\WebWinFormsInteraction\DotNetParts\Shared\bin\Debug\Shared.dll
+D:\Hacking\WebWinFormsInteraction\DotNetParts\Shared\bin\Debug\Shared.pdb
+D:\Hacking\WebWinFormsInteraction\DotNetParts\Shared\obj\Debug\Shared.csprojAssemblyReference.cache
+D:\Hacking\WebWinFormsInteraction\DotNetParts\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
+D:\Hacking\WebWinFormsInteraction\DotNetParts\Shared\obj\Debug\Shared.dll
+D:\Hacking\WebWinFormsInteraction\DotNetParts\Shared\obj\Debug\Shared.pdb
+C:\DATA Backup\D\Hacking\WebWinFormsInteraction\DotNetParts\Shared\bin\Debug\Shared.dll
+C:\DATA Backup\D\Hacking\WebWinFormsInteraction\DotNetParts\Shared\bin\Debug\Shared.pdb
+C:\DATA Backup\D\Hacking\WebWinFormsInteraction\DotNetParts\Shared\obj\Debug\Shared.csprojAssemblyReference.cache
+C:\DATA Backup\D\Hacking\WebWinFormsInteraction\DotNetParts\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
+C:\DATA Backup\D\Hacking\WebWinFormsInteraction\DotNetParts\Shared\obj\Debug\Shared.dll
+C:\DATA Backup\D\Hacking\WebWinFormsInteraction\DotNetParts\Shared\obj\Debug\Shared.pdb

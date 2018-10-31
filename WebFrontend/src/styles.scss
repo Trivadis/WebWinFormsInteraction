@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+}
+
+.banner {
+  overflow: hidden;
+  max-height: 250px;
+}
+
+.banner img {
+  width: 100%;
+  margin: -11% 0 -10px;
+}
+
+.person-col {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+
+.person-col .box {
+  border: 1px solid #c1c1c1;
+  border-radius: 4px;
+}
+
+app-person .box {
+  padding: 10px;
+}
+
+table.table-striped tbody .selected,
+.table-striped tbody tr.selected:nth-of-type(odd) {
+  background-color: #bb10102b;
+}
+
+table tr {
+  cursor: pointer;
+}
+
+.person-name {
+  font-weight: bold;
+  margin-bottom: 30px;
+}

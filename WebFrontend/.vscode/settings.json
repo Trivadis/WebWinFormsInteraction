@@ -1,0 +1,20 @@
+{
+    "svn.ignoreMissingSvnWarning": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "**/*.js.map": {
+            "when": "$(basename)"
+        }
+    },
+    "files.defaultLanguage": "typescript",
+    "files.hotExit": "off",
+    "workbench.iconTheme": "vscode-icon-theme",
+    "files.trimTrailingWhitespace": true,
+    "prettier.singleQuote": true,
+    "prettier.printWidth": 100,
+    "editor.formatOnSave": true
+}
