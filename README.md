@@ -21,7 +21,7 @@ In the Demo the web client an the locally installed WinForms app communicate thr
 ### Install and run Webserver for Angular App
 - Navigate (cmd) to the folder 'WebFrontend'
 - run `code .` to open the folder in VS Code and return to the console
-- run `yarn install` to restore the node_modules (npm packages)
+- run `npm install` to restore the node_modules (npm packages)
 - run `ng serve`
 
 ### Install and run API, SignalR Hub and WinForms App
