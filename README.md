@@ -7,6 +7,7 @@ The article descripts an approach to migrate a huge legacy pc app to a modern we
 In the Demo the web client an the locally installed WinForms app communicate through a SignalR Hub which is also installed on the users computer.
 
 ## Prerequisits
+- Windows (WinForms)
 - Visual Studio 2017
 - Git: https://git-scm.com/downloads
 - Node.js und NPM: https://nodejs.org
@@ -26,11 +27,22 @@ In the Demo the web client an the locally installed WinForms app communicate thr
 
 ### Install and run API, SignalR Hub and WinForms App
 - Navigate to the folder 'DotNetParts' and open DotNetParts.sln with Visual Studio
+- Restore Nuget Packages
+- Run App by Pressing F5. SignalR Hub (Console App), WebAPI (AspNet .NetCore) and WinForms App will be started.
 
 ### Explore
+- Start "Old App" from the starter form.
+- Open the Web App by klicking the button top left.
+- Choose and change person in the "New Web App" and observe the synchronization in the old App.
+- Press "Edit" on the person -> the old App changes to Edit Mode and appear in front.
+- Save... Edit... Change person... close WinForms App (not the Starter Form) -> Web App logs out. Re-open old App -> Web is awailable again...
+- ...
 
 ## Architecture
 
 ## What it is
 
 ## What it isn't
+- General recipe for migrating old apps. 
+
+Check, design, protoype and challenge your situation in your environment! My article in the Windows Developer magazine (December 2018) might give your additional useful thoughts to this topic.
