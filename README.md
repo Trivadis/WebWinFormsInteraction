@@ -6,7 +6,7 @@ The article descripts an approach to migrate a huge legacy pc app to a modern we
 
 In the Demo the web client an the locally installed WinForms app communicate through a SignalR Hub which is also installed on the users computer.
 
-## Prerequisits
+## Prerequisites
 - Windows (WinForms)
 - Visual Studio 2017
 - Git: https://git-scm.com/downloads
