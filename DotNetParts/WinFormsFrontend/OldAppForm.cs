@@ -13,6 +13,7 @@ namespace WinFormsFrontend
     public partial class OldAppForm : Form
     {
         private IHubProxy _hub;
+        private HubConnection _hubConnection;
         private SynchronizationContext _uiContext;
         private delegate void UiThreadDelegation();
 
@@ -25,29 +26,29 @@ namespace WinFormsFrontend
             _uiContext = SynchronizationContext.Current;
 
             string url = @"http://localhost:8080/";
-            var connection = new HubConnection(url);
-            _hub = connection.CreateHubProxy("InteractionHub");
-            connection.Start().Wait();
+            _hubConnection = new HubConnection(url);
+            _hub = _hubConnection.CreateHubProxy("InteractionHub");
+            _hubConnection.Start().Wait();
 
             // register listener on hub actions fired by other clients
-            _hub.On<HubAction>("ActionRequested", (action) => OnActionRequested(action));
+            _hub.On<HubAction>("ActionRequested", async (action) => await OnActionRequestedAsync(action));
 
             // inform all other clients that an "authenticated" main-app is registered on the hub (insecure demo case)
-            DispatchAction(new HubAction { Name = "login", Arguments = "" });
+            Task.Run(async () => await DispatchActionAsync(new HubAction { Name = "login", Arguments = "" }));
         }
 
-        private void OnActionRequested(HubAction action)
+        private async Task OnActionRequestedAsync(HubAction action)
         {
             switch (action.Name)
             {
                 case "requestLogin":
                     // response with login
-                    DispatchAction(new HubAction { Name = "login", Arguments = "" });
+                    await DispatchActionAsync(new HubAction { Name = "login", Arguments = "" });
                     break;
 
                 case "changePerson":
                     // display the same person as the sender of this action
-                    Task.Run(() => RefreshActivePerson(action.Arguments));
+                    await RefreshActivePersonAsync(action.Arguments);
                     break;
 
                 case "editPerson":
@@ -63,7 +64,7 @@ namespace WinFormsFrontend
             }
         }
 
-        private async Task RefreshActivePerson(string id)
+        private async Task RefreshActivePersonAsync(string id)
         {
             var httpClient = new HttpClient();
             HttpResponseMessage response = await httpClient.GetAsync($"https://localhost:44369/api/persons/{id}");
@@ -126,26 +127,27 @@ namespace WinFormsFrontend
         /// Dispatch a action to the hub, which will notify the other clients.
         /// </summary>
         /// <param name="action"></param>
-        private void DispatchAction(HubAction action)
+        private async Task DispatchActionAsync(HubAction action)
         {
-            _hub.Invoke("DispatchAction", action);
+            await _hub.Invoke("DispatchAction", action);
         }
 
         private void CloseButton_Click(object sender, System.EventArgs e)
         {
-            Logout();
+            LogoutAsync();
             Close();
         }
 
         private void OldAppForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Logout();
+            LogoutAsync();
         }
 
-        private void Logout()
+        private async void LogoutAsync()
         {
             // All connected clients have to be notified, that the leading app (old) is logged out.
-            DispatchAction(new HubAction { Name = "logout", Arguments = "" });
+            await DispatchActionAsync(new HubAction { Name = "logout", Arguments = "" });
+            _hubConnection.Stop();
         }
 
         private void SetNotification(string message, System.Drawing.Color? color = null)
@@ -171,7 +173,7 @@ namespace WinFormsFrontend
             HttpResponseMessage response = await httpClient.PutAsync($"https://localhost:44369/api/persons/{_currentPerson.Id}", content);
             response.EnsureSuccessStatusCode();
 
-            DispatchAction(new HubAction { Name = "dataChanged" });
+            await DispatchActionAsync(new HubAction { Name = "dataChanged" });
 
             SetEditorVisibility(false);
 
