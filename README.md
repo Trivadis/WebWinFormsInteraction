@@ -45,8 +45,8 @@ In the sequence they usually grow...
 - **SignalR Hub** "DotNetParts.FrontendInteractionHub": Communication centre for all frontends old and new installed on the client (with the old app). It broadcasts acitons to "the others" (other subscribed clients).
 - **New Web App** "WebFrontend": Angular Frontend which requests the aciton "edit person" from the old app as an example of using old code in the web.
 
-## It is
-- an inspiration for people having the challenge to migrate huge legacy apps to the web.
+## It is...
+- an inspiration for developers having the challenge to migrate huge legacy apps to the web.
 - an example how old technologies and web can interact.
 
 ## It isn't...
