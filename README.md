@@ -2,7 +2,7 @@
 
 This demo was made for an article in the Windows Developer magazine which was printed in November 2018.
 
-The article descripts an approach to migrate a huge legacy pc app to a modern web app step-by-step. To release asap the usage of old functionality in the new app is a good option. Usually it's not possible to migrate code from decades within a year.
+The article describs an approach to migrate a huge legacy pc app to a modern web app step-by-step. To release a.s.a.p., the usage of old functionality in the new app might be a good option. Usually it's not possible to migrate code from decades within a year.
 
 In the Demo the web client an the locally installed WinForms app communicate through a SignalR Hub which is also installed on the users computer.
 
@@ -38,12 +38,12 @@ In the Demo the web client an the locally installed WinForms app communicate thr
 - Save... Edit... Change person... close WinForms App (not the Starter Form) -> Web App logs out. Re-open old App -> Web is awailable again...
 - ...
 
-## Architecture
+## "Architecture"
 In the sequence they usually grow...
-- *Old WinForms App "DotNetParts.WinFormsFrontend":* ...
-- *WebAPI "DotNetPartsPersonApi":* ...
-- *SignalR Hub "DotNetParts.FrontendInteractionHub":* ...
-- *New Web App "WebFrontend":* ...
+- **Old WinForms App** "DotNetParts.WinFormsFrontend": Old App dispatching relevant actions to the SignalR Hub and executing actions requested by the new client (notified by the hub).
+- **WebAPI** "DotNetPartsPersonApi": REST API shared by old and new client. In this case the data is just held in memory.
+- **SignalR Hub** "DotNetParts.FrontendInteractionHub": Communication centre for all frontends old and new installed on the client (with the old app). It broadcasts acitons to "the others" (other subscribed clients).
+- **New Web App** "WebFrontend": Angular Frontend which requests the aciton "edit person" from the old app as an example of using old code in the web.
 
 ## It is
 - an inspiration for people having the challenge to migrate huge legacy apps to the web.
