@@ -143,10 +143,11 @@ namespace WinFormsFrontend
             LogoutAsync();
         }
 
-        private async void LogoutAsync()
+        private void LogoutAsync()
         {
             // All connected clients have to be notified, that the leading app (old) is logged out.
-            await DispatchActionAsync(new HubAction { Name = "logout", Arguments = "" });
+            Task.Run(() => DispatchActionAsync(new HubAction { Name = "logout", Arguments = "" }));
+            
             _hubConnection.Stop();
         }
 
