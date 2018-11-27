@@ -27,7 +27,6 @@ In the Demo the web client an the locally installed WinForms app communicate thr
 
 ### Install and run API, SignalR Hub and WinForms App
 - Navigate to the folder 'DotNetParts' and open DotNetParts.sln with Visual Studio
-- Restore Nuget Packages
 - Run App by Pressing F5. SignalR Hub (Console App), WebAPI (AspNet .NetCore) and WinForms App will be started.
 
 ### Explore
